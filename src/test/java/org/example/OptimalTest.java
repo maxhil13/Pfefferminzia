@@ -32,6 +32,11 @@ class OptimalTest {
     }
 
     @Test
+    void calculateInsuranceAmountTestSquareMeterWithManyDecimalPlaces() {
+        assertEquals(10338.64, new Optimal(14.769487).calculateInsuranceAmount());
+    }
+
+    @Test
     void getProductNameTest() {
         assertEquals("Optimal", new Optimal(1).getProductName());
     }

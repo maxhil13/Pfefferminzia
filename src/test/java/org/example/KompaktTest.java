@@ -32,6 +32,11 @@ class KompaktTest {
     }
 
     @Test
+    void calculateInsuranceAmountTestSquareMeterWithManyDecimalPlaces() {
+        assertEquals(9600.17, new Kompakt(14.769487).calculateInsuranceAmount());
+    }
+
+    @Test
     void getProductNameTest() {
         assertEquals("Kompakt", new Kompakt(1).getProductName());
     }

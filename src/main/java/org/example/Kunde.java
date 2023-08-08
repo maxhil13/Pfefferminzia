@@ -8,23 +8,42 @@ import java.util.Vector;
  */
 public class Kunde {
 
-    public String name;
+    private String name;
 
     private Vector<HausratproduktInterface> products;
 
+    /**
+     * This constructor gets a name as a parameter and sets it to the corresponding variable.
+     * Then it initializes the vector "products" where all the products of that customer can be stored.
+     *
+     * @param name The name of the product.
+     */
     public Kunde(String name) {
         this.name = name;
         this.products = new Vector<>();
     }
 
+    /**
+     * Adds a product to the products vector.
+     *
+     * @param product A product from type HausratproduktInterface.
+     */
     public void addProduct(HausratproduktInterface product) {
         products.add(product);
     }
 
+    /**
+     * This is a getter method for the variable name.
+     *
+     * @return The name of the customer.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Prints all products stored in the products vector.
+     */
     public void printProducts() {
         System.out.println(getName() + "'s Hausratprodukte:");
         for (HausratproduktInterface product : products) {
@@ -32,6 +51,11 @@ public class Kunde {
         }
     }
 
+    /**
+     * This is a getter method for the products vector.
+     *
+     * @return The products purchased by the customer.
+     */
     public Vector<HausratproduktInterface> getProducts() {
         return products;
     }
